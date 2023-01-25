@@ -1,4 +1,4 @@
-#Wzorce projektowe
+Wzorce projektowe
 1. Kompozyt - wzorzec pozwalający na tworzenie hierarchicznej struktury obiektów. Jeden obiekt może mieć "w sobie" inne obiekty. Przydatny przy tworzeniu np.: interfejsu użytkownika, gdzie kontorlki są komponowane jako obiekty, a następnie przekazywane do innych kontrolek.
 2. Obserwator - wzorzec pozwalający na rejestorwanie obiektów jako subskrybentów innego obiektu. Gdy stan obiektu subskrybowanego się zmienia to wszystkie zarejestrowane obiekty zostają o tej zmianie powiadomione. Przydatny przy tworzeniu aplikacji, które muszą reagować na zmiany.
 3. Strategia - wzorzec pozwalający na definiowanie kilku algorytmów, które są używane w zależności od aktualnej potrzeby. Do tego, jaką czynność w tym momencie musi wykonać aplikacja, jest wybierany odpowiedni do tego algorytm.
