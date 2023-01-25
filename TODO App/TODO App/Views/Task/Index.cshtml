@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TODO_App.Models.TaskModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "TODO App";
+}
+
+<h1 class="display-4">Zadania</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Done)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @if(item.Done == true)
+                    {
+                        <p class="alert alert-success" style="width:65%">Gotowe</p>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Update" asp-route-taskID="@item.TaskID" button type="button" class="btn btn-warning">Edytuj</a> 
+                    <a asp-action="Details" asp-route-taskID="@item.TaskID" button type="button" class="btn btn-info">Szczegóły</a> 
+                    <a asp-action="Delete" asp-route-taskID="@item.TaskID" button type="button" class="btn btn-danger">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

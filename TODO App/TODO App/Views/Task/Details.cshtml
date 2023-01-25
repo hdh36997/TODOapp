@@ -1,0 +1,37 @@
+﻿@model TODO_App.Models.TaskModel
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+<h1 class="display-4">Szczegóły zadania</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripiton)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descripiton)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Done)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Done)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Update" asp-route-taskID="@Model.TaskID" button type="button" class="btn btn-warning">Edytuj</a>
+    <a asp-action="Index">
+        <img src="~/Images/back-arrow.png" width="50" height="50" alt="Back" style="cursor:pointer;" />
+    </a>
+</div>
